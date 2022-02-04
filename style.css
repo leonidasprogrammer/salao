@@ -132,16 +132,16 @@ body {
 }
 
 #header.scroll {
-  background-color: var(--base-color);
+  background-color: var(--base-color-second);
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
 }
 
 #header.scroll .logo span {
-  color: white;
+  color: var(--base-color);
 }
 
 #header.scroll .logo {
-  color: blue;
+  color: none;
 }
 
 #header.scroll .icon-menu {
@@ -149,7 +149,11 @@ body {
 }
 
 #header .icon-close {
-  color: blue;
+  color: var (--base-color);
+}
+
+#header.scroll .title {
+  color: none;
 }
 
 /**** Logo ****/
@@ -191,12 +195,14 @@ nav ul li a.active {
 nav ul li a::after {
   content: '';
   width: 0%;
-  height: 2px;
+  height: 2.5px;
   background: var(--base-color);
 
+  border-radius: 2rem;
+
   position: absolute;
-  left: 0;
-  bottom: -1.5rem;
+  left: 0.03rem;
+  bottom: -0.5rem;
 
   transition: width 0.2s;
 }

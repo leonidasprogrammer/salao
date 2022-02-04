@@ -61,7 +61,7 @@ scrollReveal.reveal(
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials
-  #contact .text, #contact .links,
+  .contact, .text, #contact .links,
   footer .brand, .footer, .social,  .swiper-wrapper
   `,
   { interval: 100 }
@@ -81,7 +81,7 @@ function backToTop() {
 /* Menu ativo conforme a seção visível na página */
 const sections = document.querySelectorAll('main section[id]')
 function activateMenuAtCurrentSection() {
-  const checkpoint = window.pageYoffset + (window.innerHeight / 8) * 4
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
 
   for (const section of sections) {
     const sectionTop = section.offsetTop
